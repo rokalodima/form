@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="info">
+        <div class="infoBox">
+            <p class="boxName">Введите имя</p>
+            <input id="name" type="text" placeholder="Имя">
+        </div>
+        <div class="infoBox">
+            <p class="boxName">Введите возраст</p>
+            <input id="age" type="text" placeholder="Возраст">
+        </div>
+        <div class="infoBox">
+            <p class="boxName">Дата рождения</p>
+            <input id="date" type="date">
+        </div>
+        <div class="infoBox">
+            <p class="boxName">Ваше образование</p>
+            <select id="study">
+                <option>Высшее</option>
+                <option>Среднее</option>
+                <option>Общее</option>
+            </select>
+        </div>
+        <button id="getPersonBtn" type="submit">Отправить</button>
+    </form>
+    <div id="myModal" class="modal"> </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

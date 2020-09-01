@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#info {
+    width: 40%;
+    margin: 50px auto;
+    border: 3px solid brown;
+    background-color: rgb(231, 236, 236);
+    padding: 30px 30px;
+}
+
+
+
+.infoBox {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.boxName {
+    font-size: 1rem;
+    font-weight: bold;
+    color: green;
+    text-align: right;
+}
+
+#getPersonBtn {
+    width: 30%;
+    height: 30px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
