@@ -35,6 +35,10 @@
     transform: translate(-50%, 0);
 }
 
+.error {
+    border: 2px solid red;
+}
+
 .modal {
     display: none;
     position: fixed;
