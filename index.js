@@ -8,8 +8,21 @@ getPersonBtn.addEventListener("click", function () {
   age = inputAge.value;
   date = inputdate.value;
   study = selectStudy.value;
-  console.log(name, age, date, study);
-});
+  var modal = document.getElementById("my_modal");
+  // var btn = document.getElementById("btn_modal_window");
+  var span = document.getElementsByClassName("close_modal_window")[0];
 
-document.body.style.background = "red";
-setTimeout(() => (document.body.style.background = ""), 1000);
+  getPersonBtn.onclick = function () {
+    modal.style.display = "block";
+  };
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+});
