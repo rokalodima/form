@@ -4,44 +4,52 @@ const inputName = document.getElementById("name");
 const inputAge = document.getElementById("age");
 const inputDate = document.getElementById("date");
 const selectStudy = document.getElementById("study");
+const modal = document.querySelector(".modal");
+const content = document.querySelector(".content");
+let arr = [];
+
 form.addEventListener("submit", function (event) {
+  event.preventDefault();
   if (!validate(inputName, inputAge, inputDate, selectStudy)) {
     inputName.classList.add("error");
     inputAge.classList.add("error");
     inputDate.classList.add("error");
     selectStudy.classList.add("error");
   } else {
-    name = inputName.value;
-    age = inputAge.value;
-    date = inputDate.value;
-    study = selectStudy.value;
     inputName.classList.remove("error");
     inputAge.classList.remove("error");
     inputDate.classList.remove("error");
     selectStudy.classList.remove("error");
   }
 
-  console.log(name, age, date, study);
-  event.preventDefault();
+  arr.push(inputName.value);
+  arr.push(inputAge.value);
+  arr.push(inputDate.value);
+  arr.push(selectStudy.value);
+  arr.forEach((item) => {
+    content.innerHTML += `${item}<br>`;
+  });
 });
 
+// function validate(input) {
+//   return !!input.value;
+// }
+
 function validate(input) {
-  return !!input.value;
-}
-var modal = document.getElementById("my_modal");
-// var btn = document.getElementById("btn_modal_window");
-var span = document.getElementsByClassName("close_modal_window")[0];
+  if (!input.value) {
 
-getPersonBtn.onclick = function () {
-  modal.style.display = "block";
-};
-
-span.onclick = function () {
-  modal.style.display = "none";
-};
-
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+    return false;
   }
-};
+  return true
+}
+
+const modalWrapper = document.querySelector(".modal-wrapper");
+const closeBtn = document.querySelector("#closeBtn");
+
+getPersonBtn.addEventListener("click", () => {
+  modalWrapper.style.display = "block";
+});
+
+closeBtn.addEventListener("click", () => {
+  modalWrapper.style.display = "none";
+});

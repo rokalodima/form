@@ -39,32 +39,37 @@
     border: 2px solid red;
 }
 
-.modal {
+
+.modal-wrapper {
+    background-color: rgba(128, 128, 128, 0.4);
     display: none;
     position: fixed;
-    z-index: 1;
-    left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1000;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
-.modal .modal_content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    z-index: 99999;
+.modal {
+    padding: 1rem;
+    border: 3px solid purple;
+    background-color: white;
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
 }
 
-.modal .modal_content .close_modal_window {
-    color: #aaa;
+#closeBtn {
+    border: none;
+    background-color: inherit;
+    outline: inherit;
     float: right;
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 1rem;
+    color: red;
     cursor: pointer;
 }
